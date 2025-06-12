@@ -3,6 +3,5 @@
     <Project Path="src/TodojsAspire.ApiService/TodojsAspire.ApiService.csproj" />
     <Project Path="src/TodojsAspire.AppHost/TodojsAspire.AppHost.csproj" />
     <Project Path="src/TodojsAspire.ServiceDefaults/TodojsAspire.ServiceDefaults.csproj" />
-    <Project Path="src/TodojsAspire.Web/TodojsAspire.Web.csproj" />
   </Folder>
 </Solution>
