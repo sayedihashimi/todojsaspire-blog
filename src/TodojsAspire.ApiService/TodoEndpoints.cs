@@ -8,11 +8,11 @@ public static class TodoEndpoints
     {
         var group = routes.MapGroup("/Todo");
 
-group.MapGet("/", async (TodoDbContext db) =>
-{
-    return await db.Todo.OrderBy(t => t.Position).ToListAsync();
-})
-.WithName("GetAllTodos");
+        group.MapGet("/", async (TodoDbContext db) =>
+        {
+            return await db.Todo.OrderBy(t => t.Position).ToListAsync();
+        })
+        .WithName("GetAllTodos");
 
         group.MapGet("/{id}", async Task<Results<Ok<Todo>, NotFound>> (int id, TodoDbContext db) =>
         {
