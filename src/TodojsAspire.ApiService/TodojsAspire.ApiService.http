@@ -1,4 +1,4 @@
-@todoapibaseurl = http://localhost:5306
+@todoapibaseurl = https://localhost:7473
 
 GET {{todoapibaseurl}}/Todo/
 
