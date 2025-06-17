@@ -4,11 +4,10 @@ import TodoItem from './TodoItem';
 
 /**
  * Todo component represents the main TODO list application.
- * It allows users to add new tasks, delete tasks, and move tasks up or down in the list.
- * The component maintains the state of the task list and the new task input.
+ * It allows users to add new todos, delete todos, and move todos up or down in the list.
+ * The component maintains the state of the todos list and the new task input.
  */
 function TodoList() {
-    const [tasks, setTasks] = useState([]);
     const [newTaskText, setNewTaskText] = useState('');
     const [todos, setTodo] = useState([]);
 
@@ -29,6 +28,7 @@ function TodoList() {
     }
 
     async function addTask(event) {
+        event.preventDefault();
         if (newTaskText.trim()) {
             // call the API to add the new task
             const result = await fetch("/api/Todo", {
@@ -45,7 +45,6 @@ function TodoList() {
 
             setNewTaskText('');
         }
-        event.preventDefault();
     }
 
     async function deleteTask(id) {
